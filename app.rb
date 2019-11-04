@@ -20,4 +20,6 @@ class BookmarkManager < Sinatra::Base
     erb :saved
   end
 
+  run! if app_file == $0
+
 end
