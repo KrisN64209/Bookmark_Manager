@@ -2,10 +2,22 @@ require 'sinatra'
 
 require 'sinatra/base'
 
-class Bookmark_manager < Sinatra::Base
+class BookmarkManager < Sinatra::Base
+  enable :sessions
 
   get '/' do
     erb :index
+  end
+
+  post '/entered' do
+    p params
+    session[:bookmark] = params[:bookmark]
+    redirect '/bookmarks'
+  end
+
+  get '/bookmarks' do
+    @bookmark = session[:bookmarks]
+    erb :saved
   end
 
 end
