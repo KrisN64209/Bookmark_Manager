@@ -12,4 +12,10 @@ Filter bookmarks by tag
 Comment on bookmarks
 Users are restricted to manage only their own bookmarks
 
+User Story
+---
+
+As a user I want to be able to store a web address as a Bookmark.
+This way I can get back to the website quickly and easily.
+
 
