@@ -9,15 +9,9 @@ class BookmarkManager < Sinatra::Base
     erb :index
   end
 
-  post '/entered' do
-    p params
-    session[:bookmark] = params[:bookmark]
-    redirect '/bookmarks'
-  end
-
   get '/bookmarks' do
-    @bookmark = session[:bookmark]
-    erb :saved
+    @bookmarks = Bookmark.all
+    erb :'bookmarks/index'
   end
 
   run! if app_file == $0
