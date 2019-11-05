@@ -2,7 +2,7 @@ require './lib/bookmark.rb'
 
 describe Bookmark do
 
-  subject(:a_bookmark) {described_class.new("www.bgl.com")}
+  subject(:a_bookmark) {described_class.new}
   it 'can create an instance of the Bookmark class' do
       expect(a_bookmark).to be_an_instance_of Bookmark
   end
