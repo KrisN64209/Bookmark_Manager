@@ -1,10 +1,6 @@
 require 'pg'
 
 feature 'Creating a Bookmark' do
-  scenario 'Visiting index page' do
-    visit '/'
-    expect(page).to have_content 'Bookmark Manager'
-  end
   
   scenario 'A user can see bookmarks' do
     connection = PG.connect(dbname: 'bookmark_manager_test')
